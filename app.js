@@ -228,7 +228,10 @@ Hint: Use the String.prototype.split() method to separate the first and last
 let firstLast = [];
 
 // Complete the exercise in the space below:
-
+firstLast = people.map(name => {
+    const [last, first] = name.split(', ');
+    return `${first} ${last}`;
+})
 // Check your work:
 console.log('Exercise 5 my result: ', firstLast);
 console.log('Exercise 5 correct result: ', [
@@ -289,7 +292,7 @@ old or older.
 let isAdultPresent = null;
 
 // Complete the exercise in the space below:
-
+isAdultPresent = devs.some(dev => dev.year <= 2024 - 18);
 // Check your work:
 console.log('Exercise 6 my result: ', isAdultPresent);
 console.log('Exercise 6 correct result: ', true);
@@ -310,7 +313,7 @@ Use Array.prototype.every() to determine if every person in the devs array is
 let isEveryone19OrOlder = null;
 
 // Complete the exercise in the space below:
-
+isEveryone19OrOlder = devs.every(dev => dev.year <= 2024 - 19);
 // Check your work:
 console.log('Exercise 7 my result: ', isEveryone19OrOlder);
 console.log('Exercise 7 correct result: ', false);
@@ -327,7 +330,7 @@ a specific ID 823423 from an array of comment objects.
 let commentById = {};
 
 // Complete the exercise in the space below:
-
+commentById = comments.find(comment => comment.id === 823423);
 // Check your work:
 console.log('Exercise 8 my result: ', commentById);
 console.log('Exercise 8 correct result: ', { text: 'Super good', id: 823423 });
@@ -344,7 +347,7 @@ of comment objects.
 let idx = null;
 
 // Complete the exercise in the space below:
-
+idx = comments.findIndex(comment => comment.id === 123523);
 // Check your work:
 console.log('Exercise 9 my result: ', idx);
 console.log('Exercise 9 correct result: ', 3);
